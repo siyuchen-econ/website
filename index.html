@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Siyu Chen — PhD candidate in Behavioral and Experimental Economics at Nanyang Technological University."
+    />
+    <meta name="theme-color" content="#f4f0e8" />
+    <title>Siyu Chen · Economics</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=Libre+Caslon+Display&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260910" />
+    <script src="content.js?v=20260909" defer></script>
+    <script src="script.js?v=20260907e" defer></script>
+  </head>
+  <body data-page="home">
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Siyu Chen, home">
+        <span class="wordmark-mark">SC</span>
+        <span class="wordmark-name" data-bind="name">Siyu Chen</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="research.html" data-nav="research">Research</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero page-shell" aria-labelledby="hero-title">
+        <div class="portrait-wrap" aria-label="Portrait of Siyu Chen">
+          <div class="portrait" role="img" aria-label="Siyu Chen"></div>
+        </div>
+
+        <div class="hero-content">
+          <h1 id="hero-title" data-bind="name">Siyu Chen</h1>
+          <p class="hero-intro" data-bind="intro"></p>
+          <p class="hero-bio" data-bind="bio"></p>
+
+          <div class="hero-contact">
+            <span>Contact me at Email:</span>
+            <a data-link="email" href="mailto:siyu013@e.ntu.edu.sg" data-bind="email"></a>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button button-primary" data-link="research" href="research.html">Research</a>
+            <a class="text-link" data-link="cv" href="image_siyu_1.png" target="_blank" rel="noreferrer">View my CV</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer page-shell">
+      <p>© <span data-bind="year"></span> <span data-bind="name">Siyu Chen</span></p>
+      <p>Behavioral &amp; Experimental Economics</p>
+    </footer>
+  </body>
+</html>
