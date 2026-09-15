@@ -17,9 +17,9 @@ window.SITE_CONTENT = {
     institutionShort: "Nanyang Technological University",
     cv: "files/SiyuChen_CV.pdf",
     intro:
-      "I'm currently a PhD student at Nanyang Technological University in Singapore. Thanks for dropping by.",
+      "Welcome to my personal website. I'm currently a PhD student at Nanyang Technological University in Singapore.",
     bio:
-      "I use experiments to study coordination under different institutional designs and socio-psychological contexts, with a focus on network structures, social norms, and group identity.",
+      "My research uses experiments to study social interaction under different contexts, with a focus on network structures, social norms, and group identity.",
   },
 
   researchIntro:
