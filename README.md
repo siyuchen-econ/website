@@ -35,10 +35,10 @@ The current portrait is taken directly from `image_siyu.png` using CSS cropping.
 background: url("assets/profile.jpg") center / cover no-repeat;
 ```
 
-The CV button currently opens `image_siyu_1.png`. Once you have a PDF:
+The CV button currently opens `files/SiyuChen_CV.pdf`. To replace it:
 
-1. Add it as `files/siyu-chen-cv.pdf`.
-2. Change `cv` in `content.js` to `"files/siyu-chen-cv.pdf"`.
+1. Add the new PDF to the `files/` folder.
+2. Change `cv` in `content.js` and the fallback link in `index.html` to the new path.
 
 ## Publish with GitHub Pages
 

@@ -16,10 +16,11 @@ window.SITE_CONTENT = {
     institution: "Nanyang Technological University, Singapore",
     institutionShort: "Nanyang Technological University",
     cv: "files/SiyuChen_CV.pdf",
-    intro:
+    bio: [
       "Welcome to my website! I am a PhD Candidate in Economics at Nanyang Technological University in Singapore.",
-    bio:
-      "My research uses lab experiments to examine how individuals interact and coordinate across different social and institutional settings, with a particular focus on network structures, social norms, and group identity.\n\nThese questions reflect where my research journey has taken me so far. I hope to explore and understand many more along the way.",
+      "My research uses lab experiments to examine how individuals interact and coordinate across different social and institutional settings, with a particular focus on network structures, social norms, and group identity.",
+      "These questions reflect where my research journey has taken me so far. I hope to explore and understand many more along the way.",
+    ],
   },
 
   researchIntro:

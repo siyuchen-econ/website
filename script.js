@@ -26,6 +26,15 @@
   const currentNav = document.querySelector(`[data-nav="${currentPage}"]`);
   if (currentNav) currentNav.setAttribute("aria-current", "page");
 
+  const bioContainer = document.querySelector('[data-list="bio"]');
+  if (bioContainer) {
+    const bioParagraphs = Array.isArray(profile.bio) ? profile.bio : [profile.bio];
+    bioContainer.innerHTML = bioParagraphs
+      .filter(Boolean)
+      .map((paragraph) => `<p>${escapeHTML(paragraph)}</p>`)
+      .join("");
+  }
+
   const papersList = document.querySelector('[data-list="papers"]');
   if (papersList) {
     papersList.innerHTML = papers.map(renderPaper).join("");
@@ -37,7 +46,7 @@
       : `<p class="placeholder-copy">Abstract to be added.</p>`;
 
     const downloadAction = paper.pdf
-      ? `<a class="paper-download" href="${escapeAttribute(paper.pdf)}" download>PDF</a>`
+      ? `<a class="paper-download" href="${escapeAttribute(paper.pdf)}" target="_blank" rel="noopener noreferrer" type="application/pdf">PDF</a>`
       : "";
 
     return `
