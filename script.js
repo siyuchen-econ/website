@@ -26,58 +26,58 @@
   const currentNav = document.querySelector(`[data-nav="${currentPage}"]`);
   if (currentNav) currentNav.setAttribute("aria-current", "page");
 
+  const bioContainer = document.querySelector('[data-list="bio"]');
+  if (bioContainer) {
+    const bioParagraphs = Array.isArray(profile.bio) ? profile.bio : [profile.bio];
+    bioContainer.innerHTML = bioParagraphs
+      .filter(Boolean)
+      .map((paragraph) => `<p>${escapeHTML(paragraph)}</p>`)
+      .join("");
+  }
+
   const papersList = document.querySelector('[data-list="papers"]');
   if (papersList) {
     papersList.innerHTML = papers.map(renderPaper).join("");
   }
 
-  function renderPaper(paper, index) {
-    const number = String(index + 1).padStart(2, "0");
-    const title = paper.pdf
-      ? `<a class="paper-title-link" href="${escapeAttribute(paper.pdf)}" target="_blank" rel="noreferrer">${escapeHTML(paper.title)} <span aria-hidden="true">↗</span></a>`
-      : `<span class="paper-title-link paper-title-disabled">${escapeHTML(paper.title)}</span>`;
-
-    const pdfAction = paper.pdf
-      ? `<a class="paper-pdf" href="${escapeAttribute(paper.pdf)}" target="_blank" rel="noreferrer">View PDF <span aria-hidden="true">↗</span></a>`
-      : `<span class="paper-pdf paper-pdf-muted">PDF forthcoming</span>`;
-
+  function renderPaper(paper) {
     const abstract = paper.abstract
       ? `<p>${escapeHTML(paper.abstract)}</p>`
       : `<p class="placeholder-copy">Abstract to be added.</p>`;
 
-    const figure = paper.image
-      ? `<figure class="paper-figure">
-          <img src="${escapeAttribute(paper.image)}" alt="${escapeAttribute(paper.imageAlt || "Research figure")}" loading="lazy" />
-          ${paper.imageCaption ? `<figcaption>${escapeHTML(paper.imageCaption)}</figcaption>` : ""}
-        </figure>`
-      : `<div class="figure-placeholder" aria-label="Reserved space for a representative paper figure">
-          <svg viewBox="0 0 80 48" aria-hidden="true">
-            <path d="M7 39 24 23l12 10 17-20 20 26" />
-            <circle cx="24" cy="13" r="4" />
-          </svg>
-          <span>Representative figure</span>
-          <small>Add an image path in content.js</small>
-        </div>`;
+    const downloadAction = paper.pdf
+      ? `<a class="paper-download" href="${escapeAttribute(paper.pdf)}" target="_blank" rel="noopener noreferrer" type="application/pdf">PDF <span aria-hidden="true">↗</span></a>`
+      : "";
 
     return `
       <article class="paper">
-        <div class="paper-number" aria-hidden="true">${number}</div>
         <div class="paper-main">
-          <div class="paper-meta">
-            <span>${escapeHTML(paper.status)}</span>
-            ${pdfAction}
+          <div class="paper-title-row">
+            <h3>${escapeHTML(paper.title)}</h3>
           </div>
-          <h3>${title}</h3>
-          <p class="paper-authors">${escapeHTML(paper.authors)}</p>
+          <p class="paper-authors">${renderAuthors(paper.authors)}</p>
           <div class="paper-content">
-            <div class="paper-abstract">
-              <h4>Abstract</h4>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
               ${abstract}
-            </div>
-            ${figure}
+            </details>
+            ${downloadAction}
           </div>
         </div>
       </article>`;
+  }
+
+  function renderAuthors(authors) {
+    const links = content.coauthorLinks || {};
+    const names = Object.keys(links).sort((a, b) => b.length - a.length);
+    if (!names.length) return escapeHTML(authors);
+    const pattern = new RegExp(`(${names.map((name) => name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`, "g");
+    return String(authors).split(pattern).map((part, index) => {
+      if (index % 2 === 0) return escapeHTML(part);
+      const url = links[part];
+      if (!/^https?:\/\//i.test(url)) return escapeHTML(part);
+      return `<a href="${escapeAttribute(url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(part)}</a>`;
+    }).join("");
   }
 
   function escapeHTML(value) {

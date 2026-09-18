@@ -16,9 +16,9 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=Libre+Caslon+Display&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="content.js" defer></script>
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260918i" />
+    <script src="content.js?v=20260917" defer></script>
+    <script src="script.js?v=20260917" defer></script>
   </head>
   <body data-page="home">
     <header class="site-header">
@@ -34,26 +34,26 @@
 
     <main>
       <section class="hero page-shell" aria-labelledby="hero-title">
-        <div class="portrait-wrap" aria-label="Portrait of Siyu Chen">
-          <div class="portrait" role="img" aria-label="Siyu Chen"></div>
-        </div>
-
-        <div class="hero-content">
-          <p class="hero-kicker">Welcome</p>
-          <h1 id="hero-title" data-bind="name">Siyu Chen</h1>
-          <p class="hero-role" data-bind="role">PhD Candidate in Economics</p>
-          <p class="hero-institution" data-bind="institution"></p>
-          <p class="hero-bio" data-bind="bio"></p>
+        <div class="hero-aside">
+          <div class="portrait-wrap" aria-label="Portrait of Siyu Chen">
+            <div class="portrait" role="img" aria-label="Siyu Chen"></div>
+          </div>
 
           <div class="hero-contact">
-            <span>Email</span>
+            <span>Email:</span>
             <a data-link="email" href="mailto:siyu013@e.ntu.edu.sg" data-bind="email"></a>
           </div>
 
-          <div class="hero-actions">
-            <a class="button button-primary" data-link="research" href="research.html">Research</a>
-            <a class="text-link" data-link="cv" href="image_siyu_1.png" target="_blank" rel="noreferrer">View my CV</a>
+          <div class="hero-cv">
+            <a class="cv-link" data-link="cv" href="files/SiyuChen_CV.pdf" target="_blank" rel="noreferrer">
+              View academic CV <span aria-hidden="true">→</span>
+            </a>
           </div>
+        </div>
+
+        <div class="hero-content">
+          <h1 id="hero-title" data-bind="name">Siyu Chen</h1>
+          <div class="hero-bio" data-list="bio"></div>
         </div>
       </section>
     </main>
