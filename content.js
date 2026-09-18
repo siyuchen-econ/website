@@ -11,16 +11,15 @@
 window.SITE_CONTENT = {
   profile: {
     name: "Siyu Chen",
-    role: "PhD · Behavioral & Experimental Economics",
+    role: "PhD Candidate · Behavioral & Experimental Economics",
     email: "siyu013@e.ntu.edu.sg",
     institution: "Nanyang Technological University, Singapore",
     institutionShort: "Nanyang Technological University",
-    cv: "files/SiyuChen_CV.pdf",
-    bio: [
-      "Welcome to my website! I am a PhD Candidate in Economics at Nanyang Technological University in Singapore.",
-      "My research uses lab experiments to examine how individuals interact and coordinate across different social and institutional settings, with a particular focus on network structures, social norms, and group identity.",
-      "These questions reflect where my research journey has taken me so far. I hope to explore and understand many more along the way.",
-    ],
+    cv: "image_siyu_1.png", // Later: "files/siyu-chen-cv.pdf"
+    intro:
+      "I am a PhD candidate in Economics at Nanyang Technological University, Singapore.",
+    bio:
+      "My experiments study coordination under different institutional designs and socio-psychological contexts, with a focus on network structures, social norms, and group identity.",
   },
 
   researchIntro:
@@ -29,10 +28,10 @@ window.SITE_CONTENT = {
   papers: [
     {
       title: "Social Networks and the Emergence of Convention: An Experiment",
-      authors: "with Fang Liu and Yohanes Eko Riyanto",
+      authors: "Siyu Chen, Fang Liu, and Yohanes Eko Riyanto",
       status: "Working paper",
       pdf: "", // Example: "files/social-networks.pdf"
-      abstract: "We study how a behavior spreads through social networks and emerges as a society-wide convention. In a laboratory experiment, subjects with opposing induced preferences are incentivized to coordinate with neighbors in Random, Segmented, Centralized, or Core-Periphery networks. They also benefit from aligning with the broader population but must infer aggregate behavior from local observations. We find Segmented networks foster coordination within small communities, but this local agreement does not translate into population-wide convergence. By contrast, Centralized networks approach near-complete convergence. Participants in these networks take local behavior as a credible signal of aggregate behavior and infer population-wide behavior more accurately. Yet weaker convergence in Core-Periphery networks indicates that a center alone is insufficient; its coordinating role depends on how it is embedded in the surrounding network. Taken together, our findings show that network structure does more than channel information: it shapes how individuals interpret local observations and, ultimately, whether local coordination develops into a society-wide convention.",
+      abstract: "",
       image: "", // Example: "assets/social-networks-figure.png"
       imageAlt: "Representative figure from the social networks paper",
       imageCaption: "",
@@ -40,22 +39,22 @@ window.SITE_CONTENT = {
     {
       title: "Efficiency and Equity through Intertemporal Coordination in Groups",
       authors:
-        "with Fang Liu, Yohanes Eko Riyanto, Jonathan Yeo, and Jonathan Tan (Under review)",
+        "Siyu Chen, Fang Liu, Yohanes Eko Riyanto, Jonathan Yeo, and Jonathan Tan",
       status: "Under review",
-      pdf: "files/Turn_Taking.pdf",
-      abstract: "This paper experimentally examines how group size and composition affect efficiency and equity in intertemporal coordination. In a modified market entry game, players repeatedly choose between two capacity-constrained markets, one yielding a higher payoff than the other. Efficiency and equity can be achieved through intertemporal coordination, with players taking turns to enter the high-payoff market. We find that smaller groups readily establish turn-taking, whereas larger groups often fail, exhibiting less alternation and less stable coordination. Effects of group identity composition depend on group size. In smaller groups, heterogeneous identity is associated with less efficient coordination early on, but performance converges quickly. In larger groups, homogeneous identity is associated with increasingly unequal outcomes, alongside emergent patterns of exploitation and accommodation. Overall, shared identity does not uniformly improve outcomes, highlighting how coordination complexity and identity composition jointly shape the emergence and persistence of behavioral patterns in intertemporal cooperation.",
-      image: "assets/turntaking_figure.png",
-      imageAlt: "Figure from the intertemporal coordination paper",
+      pdf: "", // Example: "files/intertemporal-coordination.pdf"
+      abstract: "",
+      image: "",
+      imageAlt: "Representative figure from the intertemporal coordination paper",
       imageCaption: "",
     },
     {
       title: "The Bases of Legitimacy: How Leaders Are Chosen Shapes How They Should Persuade",
-      authors: "with Yohanes Eko Riyanto and Jonathan Yeo (Under review)",
+      authors: "Siyu Chen, Yohanes Eko Riyanto, and Jonathan Yeo",
       status: "Under review",
-      pdf: "files/Leadership.pdf",
-      abstract: "We study how the legitimacy of leadership shapes cooperation in a repeated public-goods game in which leaders can influence behavior only through nonbinding recommendations and fixed-form messages. Our experiment varies two sources of legitimacy: how leaders are selected and how they persuade followers. Each source has a less and a more collective form. Leaders are selected by random assignment, by designation from a previous leader, or by election by group members. These procedures give group members an increasing role in choosing the leader. Leaders then justify their guidance either through personal appeals to their own judgment or through communal appeals to shared social norms. We find that the effectiveness of communal persuasion relative to personal persuasion declines as leader selection becomes more collective. Communal appeals produce higher cooperation than personal appeals under random selection, a smaller advantage under designated selection, and lower cooperation when leaders are elected. This interaction arises mainly from how followers respond to the leader's guidance. It does not arise from differences in who becomes leader or in how leaders carry out their role. The results suggest that collective bases of legitimacy can substitute for one another rather than reinforce each other. Leadership therefore depends on the fit between how leaders acquire authority and how they justify it.",
-      image: "assets/leadership_figure.png",
-      imageAlt: "Figure from the leadership legitimacy paper",
+      pdf: "", // Example: "files/bases-of-legitimacy.pdf"
+      abstract: "",
+      image: "",
+      imageAlt: "Representative figure from the legitimacy paper",
       imageCaption: "",
     },
   ],
