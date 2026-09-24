@@ -19,7 +19,7 @@ window.SITE_CONTENT = {
     bio: [
       "Welcome to my website! I am a PhD Candidate in Economics at Nanyang Technological University in Singapore.",
       "My research uses lab experiments to examine how individuals interact and coordinate across different social and institutional settings, with a particular focus on network structures, social norms, and group identity.",
-      "These questions reflect where my research journey has taken me so far. I hope to explore and understand many more along the way.",
+      "These questions reflect where my research journey has taken me so far, and I'm open to many more.",
     ],
   },
 
